@@ -1,7 +1,10 @@
+import { useState } from "react"
 import { RiDeleteBin3Line } from "react-icons/ri"
 
 
 const CartContents = () => {
+  const [quantity, setQuantity] = useState(1)
+  
     const cartProducts = [
        {
         productId: 1,
@@ -22,9 +25,42 @@ const CartContents = () => {
         image: "https://picsum.photos/200?random=2"
        },
     ]
+
+    const [clientCarts, setClientCarts] = useState(cartProducts)
+
+    
+    const handleQuantityChange = (action, id) => {
+        if(action === "plus") {
+          setClientCarts((prev) => {
+            const carts = prev.map(cart => {
+              if(cart.productId === id) {
+                return { ...cart, quantity: cart["quantity"] + 1 }
+              } else {
+                return cart
+              }
+            })
+            return carts
+          })
+        }  else {
+            setClientCarts((prev) => {
+            const carts =  prev.map(cart => {
+              if(cart.productId === id) {
+                return { ...cart, quantity: cart["quantity"] > 0 ? cart["quantity"] - 1 : 0 }
+              } else {
+                return cart
+              }
+            })
+            return carts
+          })
+        }
+         
+
+        console.log(clientCarts)
+    }
   return (
+    
     <div>
-        {cartProducts.map((product, index) => (
+        {clientCarts.map((product, index) => (
             <div
               key={index}
               className="flex items-start justify-between py-4 border-b border-gray-200"
@@ -41,11 +77,11 @@ const CartContents = () => {
                             size: {product.size} | color: {product.color}
                         </p>
                         <div className="flex items-center mt-2">
-                          <button className="border rounded px-2 py-1 text-xl font-medium">
+                          <button onClick={() => handleQuantityChange("minus", product.productId)} className="border rounded px-2 py-1 text-xl font-medium">
                             -
                           </button>
                           <span className="mx-4">{product.quantity}</span>
-                          <button className="border rounded px-2 py-1 text-xl font-medium">
+                          <button onClick={() => handleQuantityChange("plus", product.productId)} className="border rounded px-2 py-1 text-xl font-medium">
                             +
                           </button>
                         </div>

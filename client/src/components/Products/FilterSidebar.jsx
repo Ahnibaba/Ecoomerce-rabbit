@@ -66,7 +66,7 @@ const FilterSidebar = () => {
       gender: params.gender,
       color: params.color || "",
       size: params.size ? params.size.split(",") : [],
-      materials: params.materials ? params.materials.split(",") : [],
+      material: params.material ? params.material.split(",") : [],
       brand: params.brand ? params.brand.split(",") : [],
       minPrice: params.minPrice || 0,
       maxPrice: params.maxPrice || 100

@@ -170,6 +170,10 @@ const getProducts = async (req, res) => {
         query.brand = { $in: brand.split(",") }
      }
 
+     if(material) {
+        query.material = { $in: material.split(",") }
+     }
+
      if(size) {
         query.size = { $in: size.split(",") }
      }
@@ -184,8 +188,8 @@ const getProducts = async (req, res) => {
 
      if(minPrice || maxPrice) {
        query.price = {}
-       if(minPrice) query.price.gte = Number(minPrice)
-       if(maxPrice) query.price.lte = Number(maxPrice)
+       if(minPrice) query.price.$gte = Number(minPrice)
+       if(maxPrice) query.price.$lte = Number(maxPrice)
      }
 
      if(search) {
@@ -197,6 +201,7 @@ const getProducts = async (req, res) => {
 
 
      // Sort Logic
+     let sort = {}
      if(sortBy) {
         switch (sortBy) {
             case "priceAsc":
@@ -232,7 +237,68 @@ const getProducts = async (req, res) => {
    } 
 }
 
+const getProduct = async (req, res) => {
+    try {
+      const product = await Product.findById(req.params.id)
+      if(product) {
+        res.json(product)
+      } else {
+        res.status(404).json({ message: "Product not found" })
+      }
+    } catch (error) {
+      console.log("Error in getProduct function", error);
+      res.status(500).send("Server Error")  
+    }
+}
+
+
+const getSimilarProducts = async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const product = await Product.findById(id)
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" })
+    }
+    const similarProducts = await Product.find({
+        _id: { $ne: id },  //Exclude the current product ID
+        gender: product.gender,
+        category: product.category,  
+    }).limit(4)
+
+    res.json(similarProducts)
+  } catch (error) {
+    console.log("Error in getSimilarProducts function", error);
+    res.status(500).send("Server Error")  
+  }
+}
+
+// Retrieves product with the highest rating
+const bestSeller = async (req, res) => {
+   try {
+     const bestSeller = await Product.findOne().sort({ rating: -1 })
+     if(bestSeller) {
+        res.json(bestSeller)
+     } else {
+        res.status(404).json({ message: "No best seller found" })
+     }
+   } catch (error) {
+     console.log("Error in bestSeller function", error);
+     res.status(500).send("Server Error")  
+   }
+}
+
+const newArrivals = async (req, res) => {
+   try {
+     const newArrivals = await Product.find().sort({ createdAt: -1 }).limit(8)
+     res.json(newArrivals)
+   } catch (error) {
+     console.log("Error in newArrivals function", error);
+     res.status(500).send("Server Error")  
+   } 
+}
 
 
 
-module.exports = { createProduct, updateProduct, deleteProduct, getProducts }
+
+module.exports = { createProduct, updateProduct, deleteProduct, getProducts, getProduct, getSimilarProducts, bestSeller, newArrivals }
