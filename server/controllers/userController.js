@@ -66,7 +66,7 @@ const login = async (req, res) => {
             // Send the user and token in response
 
             res.status(200).json({
-                message: "User created successfully",
+                message: "User logged in successfully",
                 user: {
                     _id: user._id,
                     name: user.name,
