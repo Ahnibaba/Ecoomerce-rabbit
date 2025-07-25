@@ -60,3 +60,20 @@ export const updateProduct = createAsyncThunk
     return response.data
   }
 )
+
+// Async thunk to fetch similar products
+export const fetchSimilarProducts = createAsyncThunk(
+    "products/fetchSimilarProducts",
+    async ({ id }) => {
+      const response = await axios.get(
+        `${import.meta.env.VITE_BACKEND_URL}/api/products/similar/${id}`
+      ) 
+      return response.data
+    }
+)
+
+const productsSlice = createSlice({
+    initialState: {
+        
+    }
+})
