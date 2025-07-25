@@ -64,7 +64,7 @@ export const registerUser = createAsyncThunk(
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducer: {
+  reducers: {
     logout: (state) => {
         state.user = null;
         state.guestId = `guest_${new Date().getTime()}`; // Reset guest ID on logout
