@@ -22,6 +22,8 @@ const initialState = {
 export const loginUser = createAsyncThunk(
     "auth/loginUser",
     async(userData, { rejectWithValue }) => {
+      console.log("Iamuserdata", userData);
+      
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
@@ -38,7 +40,7 @@ export const loginUser = createAsyncThunk(
 
 
 // Async Thunk for User Registration
-export const register = createAsyncThunk(
+export const registerUser = createAsyncThunk(
   "auth/registerUser",
   async (userData, { rejectWithValue }) => {
     try {
