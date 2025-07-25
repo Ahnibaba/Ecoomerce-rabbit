@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit"
 
-const store = configStore({
+const store = configureStore({
     reducer: {},
 })
 
