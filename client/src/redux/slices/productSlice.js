@@ -23,7 +23,7 @@ export const fetchProductsByFilters = createAsyncThunk(
         const response = await axios.get(
             `${import.meta.env.VITE_BACKEND_URL}/api/products?${query.toString()}`
         )
-
+        
         return response.data
     }
 )
@@ -32,11 +32,12 @@ export const fetchProductsByFilters = createAsyncThunk(
 // Async thunk to fetch a single product by ID
 export const fetchProductDetails = createAsyncThunk(
     "products/fetchProductDetails",
-    async ({ id }) => {
+    async (id) => {
         const response = await axios.get(
             `${import.meta.env.VITE_BACKEND_URL}/api/products/${id}`
         )
 
+        console.log("PROD", response);
         return response.data
     }
 
@@ -125,7 +126,7 @@ const productsSlice = createSlice({
             state.loading = false;
             state.products = Array.isArray(action.payload) ? action.payload : []
         })
-        .addCase(fetchProductsByFilters.rejected, (state) => {
+        .addCase(fetchProductsByFilters.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         })
@@ -139,7 +140,7 @@ const productsSlice = createSlice({
             state.loading = false;
             state.selectedProduct = action.payload;
         })
-        .addCase(fetchProductDetails.rejected, (state) => {
+        .addCase(fetchProductDetails.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         })
@@ -159,7 +160,7 @@ const productsSlice = createSlice({
                 state.products[index] = updatedProduct
             }
         })
-        .addCase(updateProduct.rejected, (state) => {
+        .addCase(updateProduct.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         })
@@ -171,9 +172,9 @@ const productsSlice = createSlice({
         })
         .addCase(fetchSimilarProducts.fulfilled, (state, action) => {
             state.loading = false;
-            state.products = action.payload
+            state.similarProducts = action.payload
         })
-        .addCase(fetchSimilarProducts.rejected, (state) => {
+        .addCase(fetchSimilarProducts.rejected, (state, action) => {
             state.loading = false;
             state.error = action.error.message;
         })
