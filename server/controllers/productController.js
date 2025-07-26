@@ -192,10 +192,17 @@ const getProducts = async (req, res) => {
        if(maxPrice) query.price.$lte = Number(maxPrice)
      }
 
+     console.log("IAMCOLORS", query.colors);
+     
+
      if(search) {
        query.$or = [
         {name: {$regex: search, $options: "i"}},
         {description: {$regex: search, $options: "i"}},
+        {category: {$regex: search, $options: "i"}},
+        {gender: {$regex: search, $options: "i"}},
+        {material: {$regex: search, $options: "i"}},
+        { colors: { $elemMatch: { $regex: search, $options: "i" } } }
        ] 
      }
 

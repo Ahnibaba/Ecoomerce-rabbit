@@ -59,8 +59,9 @@ export const updateCartItemQuantity = createAsyncThunk(
       ) 
       return response.data
     } catch (error) {
+      console.error(error);
        return rejectWithValue(error.response.data)
-       console.error(error);
+       
         
     }
   }
@@ -70,18 +71,18 @@ export const updateCartItemQuantity = createAsyncThunk(
 export const removeFromCart = createAsyncThunk(
   "cart/removeFromCart",
   async ({ productId, guestId, userId, size, color }, { rejectWithValue }) => {
-     try {
-       const response = await axios({
-         method: "DELETE",
-         url: `${import.meta.env.VITE_BACKEND_URL}/api/carts`,
-         data: { productId, guestId, userId, size, color }
-       })
-       return response.data
-     } catch (error) {
-        return rejectWithValue(error.response.data)
-     } 
+    try {
+      const response = await axios.delete(
+        `${import.meta.env.VITE_BACKEND_URL}/api/carts`,
+        { data: { productId, guestId, userId, size, color } }
+      );
+      return response.data;
+    } catch (error) {
+      console.error(error);
+      return rejectWithValue(error.response.data);
+    }
   }
-)
+);
 
 // Merge guest cart into user cart
 export const mergeCart = createAsyncThunk(

@@ -11,6 +11,8 @@ import { addToCart } from "../../redux/slices/cartSlice"
 
 const ProductDetails = ({ productId }) => {
     const { id } = useParams()
+    console.log(id);
+    
     const dispatch = useDispatch()
     const { selectedProduct, loading, error, similarProducts } = useSelector(
         (state) => state.products
@@ -25,9 +27,12 @@ const ProductDetails = ({ productId }) => {
     const [isButtonDisabled, setIsButtonDisabled] = useState(false)
 
     const productFetchId = productId || id
+   console.log(productFetchId);
+   
+    
 
     useEffect(() => {
-       if (productId) {
+       if (productFetchId) {
          dispatch(fetchProductDetails(productFetchId))
          dispatch(fetchSimilarProducts({ id: productFetchId }))
        }
