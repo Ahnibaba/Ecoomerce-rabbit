@@ -55,5 +55,36 @@ const orderSlice = createSlice({
         loading: false,
         error: null
      },
-     reducers: {}
+     reducers: {},
+     extraReducers: (builder) => {
+        builder
+        // Fetch user orders
+        .addCase(fetchUserOrders.pending, (state) => {
+           state.loading = true;
+           state.error = null;  
+        })
+        .addCase(fetchUserOrders.fulfilled, (state, action) => {
+            state.loading = false;
+            state.orders = action.payload
+        })
+        .addCase(fetchUserOrders.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.payload.message
+        })
+        // Fetch order details
+        .addCase(fetchOrderDetails.pending, (state) => {
+           state.loading = true;
+           state.error = null;  
+        })
+        .addCase(fetchOrderDetails.fulfilled, (state, action) => {
+            state.loading = false;
+            state.orderDetails = action.payload
+        })
+        .addCase(fetchOrderDetails.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.payload.message
+        })
+     }
 })
+
+export default orderSlice.reducer
