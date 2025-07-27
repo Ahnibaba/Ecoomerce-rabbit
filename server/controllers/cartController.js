@@ -190,7 +190,7 @@ const mergeUserCart = async (req, res) => {
             if (userCart) {
                 //Merge guest cart into user cart
                 guestCart.products.forEach((guestItem) => {
-                    const productIndex = useCart.products.findIndex(
+                    const productIndex = userCart.products.findIndex(
                         (item) => (
                             item.productId.toString() === guestItem.productId.toString() &&
                             item.size === guestItem.size &&
