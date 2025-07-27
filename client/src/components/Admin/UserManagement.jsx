@@ -1,30 +1,21 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { fetchUsers, addUser, updateUser, deleteUser } from "../../redux/slices/adminSlice";
 
 const UserManagement = () => {
-    const users = [
-        {
-            _id: 123123,
-            name: "John Doe",
-            email: "john@example.com",
-            role: "admin"
-        },
-        {
-            _id: 123123,
-            name: "John Doe",
-            email: "john@example.com",
-            role: "admin"
-        },
-        {
-            _id: 123123,
-            name: "John Doe",
-            email: "john@example.com",
-            role: "admin"
-        },
-    ]
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
-    const [clientUsers, setClientUsers] = useState(users)
-    console.log(clientUsers);
+    const { user } = useSelector((state) => state.auth)
+    const { users, loading, error } = useSelector((state) => state.admin)
 
+    useEffect(() => {
+       if(user && user.role !== "admin") {
+         navigate("/")
+       }
+    }, [user, navigate])
+     
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -39,9 +30,9 @@ const UserManagement = () => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-
-        console.log(formData);
+        e.preventDefault(addUser(formData))
+        
+        dispatch(addUser(formData))
 
         setFormData({
             name: "",
@@ -52,37 +43,27 @@ const UserManagement = () => {
     }
 
     const handleRoleChange = (userId, newRole) => {
-        console.log({ id: userId, role: newRole });
-
-        // const updatedClientUsers = clientUsers.map((clientUser) => {
-        //     if(clientUser._id === userId) {
-        //         return {...clientUser, role: newRole}
-                
-        //     }
-        // })
-        // setClientUsers(updatedClientUsers)
-
-        setClientUsers((prev) => {
-            const users = prev.map((user) => {
-                if(user._id === userId){
-                  return { ...user, role: newRole }
-                }
-            })
-            return users
-        })
+       dispatch(updateUser({ id: userId, role: newRole }))
 
     }
 
     const handleDeleteUser = (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
-            console.log("Deleting user with ID", userId);
+            dispatch(deleteUser(userId))
 
         }
     }
+
+    useEffect(() => {
+      if (user && user.role === "admin") {
+        dispatch(fetchUsers())
+      }
+    }, [users, user, dispatch])
     return (
         <div className="max-w-7xl mx-auto p-6">
             <h2 className="text-2xl font-bold mb-4">User Management</h2>
-
+             {loading && <p>Loading...</p>}
+             {error && <p>Error: {error}</p>}
             {/* Add New User Form */}
             <div className="p-6 rounded-lg mb-6">
                 <h3 className="text-lg font-bold mb-4">Add New User</h3>
@@ -158,7 +139,7 @@ const UserManagement = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {clientUsers.map((user) => (
+                        {users.map((user) => (
                             <tr key={user._id} className="border-b hover:bg-gray-50">
                                 <td className="p-4 font-medium text-gray-900 whitespace-nowrap">
                                     {user.name}
