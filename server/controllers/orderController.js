@@ -17,10 +17,10 @@ const myOrders = async (req, res) => {
 
 const myOrder = async (req, res) => {
    try {
-     const order = await Order.findById(req.params.id).populate(
-        "user",
-        "name email"
-     )
+     const order = await Order.findById(req.params.id).populate({
+       path: "user",
+       select: "name email"
+     })
 
      if(!order) {
         res.status(404).json({ message: "Order not found" })

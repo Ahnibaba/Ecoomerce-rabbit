@@ -14,10 +14,12 @@ export const fetchAllOrders = createAsyncThunk(
         const response = await axios.get(
             `${API_URL}/api/admin/orders`,
             {
-              headers: { authorization: `Bearer ${USER_TOKEN}` }
+              headers: { authorization: USER_TOKEN }
             }
         ) 
         return response.data
+        console.log(response.data);
+        
       } catch (error) {
         console.log(error)
         return rejectWithValue(error.response.data)
