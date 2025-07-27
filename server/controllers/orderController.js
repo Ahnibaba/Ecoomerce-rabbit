@@ -1,3 +1,4 @@
+const Order = require("../models/Order")
 
 
 const myOrders = async (req, res) => {

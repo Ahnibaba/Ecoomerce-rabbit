@@ -36,7 +36,7 @@ export const fetchOrderDetails = createAsyncThunk(
             }
          }
        ) 
-       return response
+       return response.data
      } catch (error) {
         console.error(error);
         return rejectWithValue(error.response.data)

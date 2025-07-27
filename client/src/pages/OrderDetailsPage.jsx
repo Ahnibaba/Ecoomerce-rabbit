@@ -1,39 +1,23 @@
 import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { Link, useParams } from "react-router-dom"
+import { fetchOrderDetails } from "../redux/slices/orderSlice"
 
 
 const OrderDetailsPage = () => {
     const { id } = useParams()
-    const [orderDetails, setOrderDetails] = useState(null)
+    const dispatch = useDispatch()
+    const { orderDetails, loading, error } = useSelector((state) => state.orders)
+    console.log(orderDetails);
+
 
     useEffect(() => {
-        const mockOrderDetails = {
-            _id: id,
-            createdAt: new Date(),
-            isPaid: true,
-            isDelivered: false,
-            paymentMethod: "PayPal",
-            shippingMethod: "Standard",
-            shippingAddress: { city: "New York", country: "USA" },
-            orderItems: [
-                {
-                    productId: "1",
-                    name: "Jacket",
-                    price: 150,
-                    quantity: 1,
-                    image: "https://picsum.photos/150?random=1"
-                },
-                {
-                    productId: "1",
-                    name: "Shirt",
-                    price: 120,
-                    quantity: 2,
-                    image: "https://picsum.photos/150?random=2"
-                },
-            ]
-        }
-        setOrderDetails(mockOrderDetails)
-    }, [id])
+        dispatch(fetchOrderDetails(id))
+    }, [dispatch, id])
+
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error: {error}</p>
+
     return (
         <div className="max-w-7xl mx-auto p-4 sm:p-6">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
@@ -52,16 +36,16 @@ const OrderDetailsPage = () => {
                         </div>
                         <div className="flex flex-col items-start sm:items-end mt-4 sm:mt-0">
                             <span className={`${orderDetails.isPaid
-                                    ? "bg-green-100 text-green-700"
-                                    : "bg-red-100 text-red-700"
+                                ? "bg-green-100 text-green-700"
+                                : "bg-red-100 text-red-700"
                                 } px-3 py-1 rounded-full text-sm font-medium mb-2`}
                             >
                                 {orderDetails.isPaid ? "Approved" : "Pending"}
                             </span>
 
                             <span className={`${orderDetails.isDelivered
-                                    ? "bg-green-100 text-green-700"
-                                    : "bg-yellow-100 text-yellow-700"
+                                ? "bg-green-100 text-green-700"
+                                : "bg-yellow-100 text-yellow-700"
                                 } px-3 py-1 rounded-full text-sm font-medium mb-2`}
                             >
                                 {orderDetails.isDelivered ? "Delivered" : "Pending Delivery"}
@@ -93,32 +77,33 @@ const OrderDetailsPage = () => {
                         <table className="min-w-full text-gray-600 mb-4">
                             <thead className="bg-gray-100">
                                 <tr>
-                                    <th className="py-2 px-4">Name</th>
-                                    <th className="py-2 px-4">Unit Price</th>
-                                    <th className="py-2 px-4">Quantity</th>
-                                    <th className="py-2 px-4">Total</th>
+                                    <th className="py-2 px-4 text-left">Name</th>
+                                    <th className="py-2 px-4 text-right">Unit Price</th>
+                                    <th className="py-2 px-4 text-right">Quantity</th>
+                                    <th className="py-2 px-4 text-right">Total</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 {orderDetails.orderItems.map((item) => (
-                                    <tr
-                                        key={item.productId} className="border-b">
-                                        <td className="py-2 px-4 flex items-center" >
-                                            <img
-                                                src={item.image}
-                                                alt={item.name}
-                                                className="size-12 object-cover rounded-lg mr-4"
-                                            />
-                                            <Link to={`/products/${item.productId}`}
-                                                className="text-blue-500 hover:underline"
-                                            >
-                                                {item.name}
-                                            </Link>
+                                    <tr key={item.productId} className="border-b">
+                                        <td className="py-2 px-4">
+                                            <div className="flex items-center">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.name}
+                                                    className="size-12 object-cover rounded-lg mr-4"
+                                                />
+                                                <Link to={`/products/${item.productId}`}
+                                                    className="text-blue-500 hover:underline"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                            </div>
                                         </td>
-                                        <td className="py-2 px-4">${item.price}</td>
-                                        <td className="py-2 px-4">${item.quantity}</td>
-                                        <td className="py-2 px-4">${item.price * item.quantity}</td>
+                                        <td className="py-2 px-4 text-right">${item.price}</td>
+                                        <td className="py-2 px-4 text-right">{item.quantity}</td>
+                                        <td className="py-2 px-4 text-right">${item.price * item.quantity}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -127,7 +112,7 @@ const OrderDetailsPage = () => {
 
                     {/* Back to Orders Link */}
                     <Link to="/my-orders" className="text-blue-500 hover:underline">
-                      Back to My Orders
+                        Back to My Orders
                     </Link>
 
                 </div>

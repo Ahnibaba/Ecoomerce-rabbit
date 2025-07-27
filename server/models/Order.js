@@ -77,7 +77,7 @@ const orderSchema = new mongoose.Schema({
         enum: ["Processing", "Shipped", "Delivered", "Cancelled"],
         default: "Processing"
     }
-}, { timeseries: true })
+}, { timestamps: true })
 
 
 
