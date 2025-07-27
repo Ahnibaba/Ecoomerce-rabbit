@@ -25,7 +25,12 @@ export const fetchCart = createAsyncThunk(
           )
           return response.data  
         } catch (error) {
-           console.error(error)
+           if (error.status === 404) {
+            console.log("No cart found");
+            
+           } else {
+             console.error(error)
+           }
            return rejectWithValue(error.response.data) 
         }
     }
@@ -91,7 +96,7 @@ export const mergeCart = createAsyncThunk(
       try {
         const response = await axios.post(
           `${import.meta.env.VITE_BACKEND_URL}/api/carts/merge`,
-          { guestId, userId },
+          { guestId, user },
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("userToken")}`

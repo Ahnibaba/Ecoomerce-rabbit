@@ -29,6 +29,8 @@ export const loginUser = createAsyncThunk(
         `${import.meta.env.VITE_BACKEND_URL}/api/users/login`,
         userData
       ) 
+      console.log(response);
+      
       localStorage.setItem("userInfo", JSON.stringify(response.data.user))
       localStorage.setItem("userToken", response.data.token)
 
@@ -76,7 +78,9 @@ const authSlice = createSlice({
       state.guestId = `guest_${new Date().getTime()}`;
       localStorage.setItem("guestId", state.guestId);  
     },
-    extraReducers: (builder) => {
+    
+  },
+  extraReducers: (builder) => {
       builder
        .addCase(loginUser.pending, (state) => {
         state.loading = true;
@@ -86,7 +90,6 @@ const authSlice = createSlice({
        .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload;
-        state.error = null
 
       })  
        .addCase(loginUser.rejected, (state, action) => {
@@ -102,7 +105,6 @@ const authSlice = createSlice({
        .addCase(registerUser.fulfilled, (state, action) => {
         state.loading = false;
         state.user = action.payload;
-        state.error = null
 
       })  
        .addCase(registerUser.rejected, (state, action) => {
@@ -112,7 +114,6 @@ const authSlice = createSlice({
       })  
         
     }
-  }
 })
 
 export const { logout, generateNewGuestId } = authSlice.actions

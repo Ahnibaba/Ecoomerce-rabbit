@@ -159,6 +159,8 @@ const removeProductFromCart = async (req, res) => {
 // Get logged-in user's or guest user's cart
 const getUserCart = async (req, res) => {
     const { userId, guestId } = req.query
+    console.log({ userId, guestId });
+    
 
     try {
         const cart = await getCart(userId, guestId)
