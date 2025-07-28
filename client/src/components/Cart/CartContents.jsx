@@ -23,6 +23,7 @@ const CartContents = ({ cart, userId, guestId, }) => {
 
   const handleRemoveFromCart = (productId, size, color) => {
     dispatch(removeFromCart({ productId, guestId, userId, size, color }))
+    
   }
   return (
     

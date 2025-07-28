@@ -18,11 +18,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=39",
+        url: "https://calvinklein-eu.scene7.com/is/image/CalvinKleinEU/LV140EM125_UB1_main?wid=625&fmt=jpeg&qlt=95%2C1&op_sharpen=0&resMode=sharp2&op_usm=1.5%2C.5%2C0%2C0&iccEmbed=0&printRes=72",
         altText: "Classic Oxford Button-Down Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=40",
+        url: "https://www.careofcarl.com/bilder/artiklar/zoom/21602111r_3.jpg?m=1682680193",
         altText: "Classic Oxford Button-Down Shirt Back View",
       },
     ],
@@ -46,11 +46,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=41",
+        url: "https://pvh-brands.imgix.net/catalog/product/media/0190324-K10K110856BEH-MO-TP-F1.jpg?w=&h=&crop=top&fit=crop&auto=compress&auto=format",
         altText: "Slim-Fit Stretch Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=42",
+        url: "https://imagescdn.louisphilippe.com/img/app/product/3/39671990-13780838.jpg?auto=format&w=390",
         altText: "Slim-Fit Stretch Shirt Back View",
       },
     ],
@@ -74,11 +74,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=43",
+        url: "https://m.media-amazon.com/images/I/51n4xBzt5mL._UY1000_.jpg",
         altText: "Casual Denim Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=44",
+        url: "https://assets.ajio.com/medias/sys_master/root/20210126/9VAx/600f0fe17cdb8c1f142fb907/-473Wx593H-460796359-lightblue-MODEL.jpg",
         altText: "Casual Denim Shirt Back View",
       },
     ],
@@ -102,11 +102,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=45",
+        url: "https://static.lefties.com/assets/public/72b7/0e8e/6f15495bb4ff/f7a0f5a8c1f8/05904505527-A1/05904505527-A1.jpg?ts=1747640405994&w=800&f=auto",
         altText: "Printed Resort Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=1",
+        url: "https://www.cesarilondon.com/cdn/shop/files/ForestPrintResortShirt-2.jpg?v=1709294876",
         altText: "Printed Resort Shirt Back View",
       },
     ],
@@ -130,11 +130,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=47",
+        url: "https://assets.ajio.com/medias/sys_master/root/20250319/eBNE/67da5de62960820c49faa023/-473Wx593H-700421307-black-MODEL.jpg",
         altText: "Slim-Fit Easy-Iron Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=2",
+        url: "https://assets.ajio.com/medias/sys_master/root/20250430/0vBX/6811c7db7a6cd4182f038afe/-473Wx593H-700421446-black-MODEL.jpg",
         altText: "Slim-Fit Easy-Iron Shirt Front View",
       },
     ],
@@ -158,11 +158,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=3",
+        url: "https://static.cilory.com/758427-thickbox_default/mens-olive-polo-t-shirt-with-contrast-ribbed-collar.jpg",
         altText: "Polo T-Shirt Front View",
       },
       {
-        url: "https://picsum.photos/500/500?random=4",
+        url: "https://campussutra.com/cdn/shop/files/CSMSSTS7127_1_f685f87e-4a9e-4118-892a-67131642ef2c.jpg?v=1725103723",
         altText: "Polo T-Shirt Back View",
       },
     ],
@@ -186,7 +186,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=5",
+        url: "https://veirdo.in/cdn/shop/files/ai_creative_0000_Layer_6.jpg?v=1753523582",
+        altText: "Oversized Graphic T-Shirt Back View",
+      },
+      {
+        url: "https://veirdo.in/cdn/shop/files/5_1_45b82bbc-f648-4ca5-a2cd-97f50e53be93.jpg?v=1753522877",
         altText: "Oversized Graphic T-Shirt Front View",
       },
     ],
@@ -210,7 +214,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=6",
+        url: "https://images-cdn.ubuy.co.in/66384830c76f702db475e6d2-mens-henley-shirts-long-sleeve-regualar.jpg",
+        altText: "Regular-Fit Henley Shirt Front View",
+      },
+      {
+        url: "https://images-cdn.ubuy.qa/6642d95c5e7de9376c656f9b-mens-henley-shirts-long-sleeve-regualar.jpg",
         altText: "Regular-Fit Henley Shirt Front View",
       },
     ],
@@ -234,7 +242,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=7",
+        url: "https://usblanks.net/cdn/shop/products/US2900BLK_1.jpg?v=1742986676",
+        altText: "Long-Sleeve Thermal Tee Front View",
+      },
+      {
+        url: "https://i.localised.com/img/ae/product/90f8eceb-ba17-4f78-8cdf-8c49f80e5e84_LARGE.jpg",
         altText: "Long-Sleeve Thermal Tee Front View",
       },
     ],
@@ -258,7 +270,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=8",
+        url: "https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1300648_alternate10?$rl_4x5_pdp$",
+        altText: "V-Neck Classic T-Shirt Front View",
+      },
+      {
+        url: "https://cdn.plutosport.com/a/ProductMedia/Boss/P.BOSS.SHI.9389/Boss-Classic-V-neck-T-shirt-Heren-3-pack-_2-2207121355_1.jpg?profile=product_page_image_medium&33",
         altText: "V-Neck Classic T-Shirt Front View",
       },
     ],
@@ -282,7 +298,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=9",
+        url: "https://media.boohoo.com/i/boohoo/mzz75917_navy_xl/male-navy-slim-fit-joggers/?w=900&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
+        altText: "Slim Fit Joggers Front View",
+      },
+      {
+        url: "https://media.boohoo.com/i/boohoo/bmm01010_navy_xl/male-navy-basic-slim-fit-jogger/?w=900&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
         altText: "Slim Fit Joggers Front View",
       },
     ],
@@ -306,7 +326,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=10",
+        url: "https://www.beyoung.in/api/cache/catalog/products/dual_pocket_jogger_3_12_2022/black_heavy_gauge_cargo_joggers_base_15_10_2024_700x933.jpg",
+        altText: "Cargo Joggers Front View",
+      },
+      {
+        url: "https://www.beyoung.in/api/cache/catalog/products/cargo_joggers/black_utility_cargo_jogger_pants_for_men_side_view_27_01_2024_700x933.jpg",
         altText: "Cargo Joggers Front View",
       },
     ],
@@ -330,7 +354,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=11",
+        url: "https://m.media-amazon.com/images/I/81x6vQt9m1L._UY1000_.jpg",
+        altText: "Tapered Sweatpants Front View",
+      },
+      {
+        url: "https://m.media-amazon.com/images/I/81gijsprf9L._UY1100_.jpg",
         altText: "Tapered Sweatpants Front View",
       },
     ],
@@ -354,7 +382,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=12",
+        url: "https://i.pinimg.com/originals/57/6e/e1/576ee1fecfd13dc3044d166897efaaa0.jpg",
+        altText: "Denim Jeans Front View",
+      },
+      {
+        url: "https://images.only.com/22026752/4277082/008/onlysons-onsweftreg-db6752matdnmnoos-blue.jpg?v=290152a573f4c7f1383c071373681bf4&format=webp&width=1280&quality=90&key=25-0-3",
         altText: "Denim Jeans Front View",
       },
     ],
@@ -378,7 +410,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=13",
+        url: "https://mensfashioner.com/media/pages/articles/ultimate-guide-to-mens-chino-khaki-pants/a2dcc1a78e-1688995619/mna040-dknavy-1408x.jpg",
+        altText: "Chino Pants Front View",
+      },
+      {
+        url: "https://images.jackjones.com/12252350/4431322/005/jackjones-spakmwinstonpants-beige.jpg?v=d689af9a1c26b6b6c3913f094a67ca8b&format=webp&width=1280&quality=90&key=25-0-3",
         altText: "Chino Pants Front View",
       },
     ],
@@ -402,7 +438,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=14",
+        url: "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/26766100/2024/3/22/f0bf1156-c8d0-476b-82d9-fefa38ef53771711091962396-ADIDAS-Originals-Men-Track-Pants-2451711091961910-1.jpg",
+        altText: "Track Pants Front View",
+      },
+      {
+        url: "https://www.seli.com.ng/sites/default/files/MM71062CH00SWT_6.jpg",
         altText: "Track Pants Front View",
       },
     ],
@@ -426,7 +466,11 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=15",
+        url: "https://kaleidoscope.scene7.com/is/image/OttoUK/600w/Skopes-Kennedy-Blue-Slim-Fit-Suit-Trousers~65X887FRSP.jpg",
+        altText: "Slim Fit Trousers Front View",
+      },
+      {
+        url: "https://assets.myntassets.com/w_412,q_60,dpr_2,fl_progressive/assets/images/28671748/2024/6/11/6788bdf2-a728-412c-991b-941e6dbbd5351718082397387-French-Connection-Men-Trousers-6371718082396726-1.jpg",
         altText: "Slim Fit Trousers Front View",
       },
     ],
@@ -450,7 +494,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=16",
+        url: "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/D86921s.jpg?im=Resize,width=750",
         altText: "Cargo Pants Front View",
       },
     ],
@@ -474,7 +518,7 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=17",
+        url: "https://i5.walmartimages.com/seo/Vibes-Men-s-Fleece-Cargo-Sweatpants-Relaxed-Fit-Bungee-Cord-Open-Bottom_aabf5742-5139-403c-b3a4-ee7ed0aa13c2_1.aec54e1b290beb46b310545a23e33d30.jpeg",
         altText: "Relaxed Fit Sweatpants Front View",
       },
     ],
@@ -498,17 +542,17 @@ const products = [
     gender: "Men",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=18",
+        url: "https://img4.dhresource.com/webp/m/0x0/f3/albu/jc/j/08/792c4c54-e9d9-41b3-9da5-7e4e8830fcce.jpg",
         altText: "Formal Dress Pants Front View",
       },
     ],
     rating: 4.9,
     numReviews: 8,
   },
+
   {
     name: "High-Waist Skinny Jeans",
-    description:
-      "High-waist skinny jeans in stretch denim with a button and zip fly. Features a flattering fit that hugs your curves and enhances your silhouette.",
+    description: "High-waist skinny jeans in stretch denim with a button and zip fly. Features a flattering fit that hugs your curves and enhances your silhouette.",
     price: 50,
     discountPrice: 45,
     countInStock: 30,
@@ -522,7 +566,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=19",
+        url: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-1.2.1&auto=format&fit=crop&w=1233&q=80",
         altText: "High-Waist Skinny Jeans",
       },
     ],
@@ -531,8 +575,7 @@ const products = [
   },
   {
     name: "Wide-Leg Trousers",
-    description:
-      "Flowy, wide-leg trousers with a high waist and side pockets. Perfect for an elegant look that combines comfort and style.",
+    description: "Flowy, wide-leg trousers with a high waist and side pockets. Perfect for an elegant look that combines comfort and style.",
     price: 60,
     discountPrice: 55,
     countInStock: 25,
@@ -546,7 +589,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=20",
+        url: "https://images.pexels.com/photos/914668/pexels-photo-914668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Wide-Leg Trousers Front View",
       },
     ],
@@ -555,8 +598,7 @@ const products = [
   },
   {
     name: "Stretch Leggings",
-    description:
-      "Soft, stretch leggings in a high-rise style. Perfect for lounging, working out, or casual wear, with a smooth fit that flatters your body.",
+    description: "Soft, stretch leggings in a high-rise style. Perfect for lounging, working out, or casual wear, with a smooth fit that flatters your body.",
     price: 25,
     discountPrice: 20,
     countInStock: 40,
@@ -570,7 +612,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=21",
+        url: "https://matethelabel.com/cdn/shop/files/231218_BC_MTL_JAN_DELIVERIES_LOOK_20_MOVE_0078e.jpg?v=1743185123",
         altText: "Stretch Leggings Front View",
       },
     ],
@@ -579,8 +621,7 @@ const products = [
   },
   {
     name: "Pleated Midi Skirt",
-    description:
-      "Elegant pleated midi skirt with a high waistband and soft fabric that drapes beautifully. Ideal for both formal and casual occasions.",
+    description: "Elegant pleated midi skirt with a high waistband and soft fabric that drapes beautifully. Ideal for both formal and casual occasions.",
     price: 55,
     discountPrice: 50,
     countInStock: 20,
@@ -594,7 +635,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=22",
+        url: "https://images.pexels.com/photos/985635/pexels-photo-985635.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Pleated Midi Skirt Front View",
       },
     ],
@@ -603,8 +644,7 @@ const products = [
   },
   {
     name: "Flared Palazzo Pants",
-    description:
-      "High-waist palazzo pants with a loose, flowing fit. Comfortable and stylish, making them perfect for casual outings or beach days.",
+    description: "High-waist palazzo pants with a loose, flowing fit. Comfortable and stylish, making them perfect for casual outings or beach days.",
     price: 45,
     discountPrice: 40,
     countInStock: 35,
@@ -618,7 +658,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=23",
+        url: "https://cdn.pixelbin.io/v2/black-bread-289bfa/original/rk-part-2/410332811001/410332811001_1.jpg",
         altText: "Flared Palazzo Pants Front View",
       },
     ],
@@ -627,8 +667,7 @@ const products = [
   },
   {
     name: "High-Rise Joggers",
-    description:
-      "Comfortable high-rise joggers with an elastic waistband and drawstring for a perfect fit. Great for lounging or working out.",
+    description: "Comfortable high-rise joggers with an elastic waistband and drawstring for a perfect fit. Great for lounging or working out.",
     price: 40,
     discountPrice: 35,
     countInStock: 30,
@@ -642,7 +681,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=24",
+        url: "https://images.pexels.com/photos/6633656/pexels-photo-6633656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "High-Rise Joggers Front View",
       },
     ],
@@ -651,8 +690,7 @@ const products = [
   },
   {
     name: "Paperbag Waist Shorts",
-    description:
-      "Stylish paperbag waist shorts with a belted waist and wide legs. Perfect for summer outings and keeping cool in style.",
+    description: "Stylish paperbag waist shorts with a belted waist and wide legs. Perfect for summer outings and keeping cool in style.",
     price: 35,
     discountPrice: 30,
     countInStock: 20,
@@ -666,7 +704,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=25",
+        url: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1233&q=80",
         altText: "Paperbag Waist Shorts Front View",
       },
     ],
@@ -675,8 +713,7 @@ const products = [
   },
   {
     name: "Stretch Denim Shorts",
-    description:
-      "Comfortable stretch denim shorts with a high-waisted fit and raw hem. Perfect for pairing with your favorite tops during warmer months.",
+    description: "Comfortable stretch denim shorts with a high-waisted fit and raw hem. Perfect for pairing with your favorite tops during warmer months.",
     price: 40,
     discountPrice: 35,
     countInStock: 25,
@@ -690,7 +727,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=26",
+        url: "https://media.boohoo.com/i/boohoo/gzz12015_mid%20blue_xl/female-mid%20blue-high-waist-stretch-denim-disco-short-/?w=900&qlt=default&fmt.jp2.qlt=70&fmt=auto&sm=fit",
         altText: "Stretch Denim Shorts Front View",
       },
     ],
@@ -699,8 +736,7 @@ const products = [
   },
   {
     name: "Culottes",
-    description:
-      "Wide-leg culottes with a flattering high waist and cropped length. The perfect blend of comfort and style for any casual occasion.",
+    description: "Wide-leg culottes with a flattering high waist and cropped length. The perfect blend of comfort and style for any casual occasion.",
     price: 50,
     discountPrice: 45,
     countInStock: 30,
@@ -714,7 +750,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=27",
+        url: "https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1233&q=80",
         altText: "Culottes Front View",
       },
     ],
@@ -723,8 +759,7 @@ const products = [
   },
   {
     name: "Classic Pleated Trousers",
-    description:
-      "Timeless pleated trousers with a tailored fit. A wardrobe essential for workwear or formal occasions.",
+    description: "Timeless pleated trousers with a tailored fit. A wardrobe essential for workwear or formal occasions.",
     price: 70,
     discountPrice: 65,
     countInStock: 25,
@@ -738,7 +773,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=28",
+        url: "https://images.pexels.com/photos/4505455/pexels-photo-4505455.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Classic Pleated Trousers Front View",
       },
     ],
@@ -747,8 +782,7 @@ const products = [
   },
   {
     name: "Knitted Cropped Top",
-    description:
-      "A stylish knitted cropped top with a flattering fitted silhouette. Perfect for pairing with high-waisted jeans or skirts for a casual look.",
+    description: "A stylish knitted cropped top with a flattering fitted silhouette. Perfect for pairing with high-waisted jeans or skirts for a casual look.",
     price: 40,
     discountPrice: 35,
     countInStock: 25,
@@ -762,7 +796,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=29",
+        url: "https://cdn-img.prettylittlething.com/1/1/a/6/11a620ab9b454eb669842ffd0212ad398b48d9e1_CNC3302_1.jpg",
         altText: "Knitted Cropped Top",
       },
     ],
@@ -771,8 +805,7 @@ const products = [
   },
   {
     name: "Boho Floral Blouse",
-    description:
-      "Flowy boho blouse with floral patterns, featuring a relaxed fit and balloon sleeves. Ideal for casual summer days.",
+    description: "Flowy boho blouse with floral patterns, featuring a relaxed fit and balloon sleeves. Ideal for casual summer days.",
     price: 50,
     discountPrice: 45,
     countInStock: 30,
@@ -786,7 +819,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=30",
+        url: "https://bohobeachhut.com/cdn/shop/files/boho-beach-hut-blouses-shirts-boho-chic-floral-blouse-pink-s-47007386042680.png?v=1723928733",
         altText: "Boho Floral Blouse",
       },
     ],
@@ -795,8 +828,7 @@ const products = [
   },
   {
     name: "Casual T-Shirt",
-    description:
-      "A soft, breathable casual t-shirt with a classic fit. Features a round neckline and short sleeves, perfect for everyday wear.",
+    description: "A soft, breathable casual t-shirt with a classic fit. Features a round neckline and short sleeves, perfect for everyday wear.",
     price: 25,
     discountPrice: 20,
     countInStock: 50,
@@ -810,7 +842,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=31",
+        url: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-1.2.1&auto=format&fit=crop&w=1233&q=80",
         altText: "Casual T-Shirt",
       },
     ],
@@ -819,8 +851,7 @@ const products = [
   },
   {
     name: "Off-Shoulder Top",
-    description:
-      "An elegant off-shoulder top with ruffled sleeves and a flattering fit. Ideal for adding a touch of femininity to your outfit.",
+    description: "An elegant off-shoulder top with ruffled sleeves and a flattering fit. Ideal for adding a touch of femininity to your outfit.",
     price: 45,
     discountPrice: 40,
     countInStock: 35,
@@ -834,7 +865,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=32",
+        url: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Off-Shoulder Top",
       },
     ],
@@ -843,8 +874,7 @@ const products = [
   },
   {
     name: "Lace-Trimmed Cami Top",
-    description:
-      "A delicate cami top with lace trim and adjustable straps. The lightweight fabric makes it perfect for layering or wearing alone during warmer weather.",
+    description: "A delicate cami top with lace trim and adjustable straps. The lightweight fabric makes it perfect for layering or wearing alone during warmer weather.",
     price: 35,
     discountPrice: 30,
     countInStock: 40,
@@ -858,7 +888,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=33",
+        url: "https://www.sojoee.com/wp-content/uploads/2025/05/TPBL-184_1.jpg",
         altText: "Lace-Trimmed Cami Top",
       },
     ],
@@ -867,8 +897,7 @@ const products = [
   },
   {
     name: "Graphic Print Tee",
-    description:
-      "A trendy graphic print tee with a relaxed fit. Pair it with jeans or skirts for a cool and casual look.",
+    description: "A trendy graphic print tee with a relaxed fit. Pair it with jeans or skirts for a cool and casual look.",
     price: 30,
     discountPrice: 25,
     countInStock: 45,
@@ -882,7 +911,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=34",
+        url: "https://images.pexels.com/photos/9558699/pexels-photo-9558699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Graphic Print Tee",
       },
     ],
@@ -891,8 +920,7 @@ const products = [
   },
   {
     name: "Ribbed Long-Sleeve Top",
-    description:
-      "A cozy ribbed long-sleeve top that offers comfort and style. Perfect for layering during cooler months.",
+    description: "A cozy ribbed long-sleeve top that offers comfort and style. Perfect for layering during cooler months.",
     price: 55,
     discountPrice: 50,
     countInStock: 30,
@@ -906,7 +934,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=35",
+        url: "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1233&q=80",
         altText: "Ribbed Long-Sleeve Top",
       },
     ],
@@ -915,8 +943,7 @@ const products = [
   },
   {
     name: "Ruffle-Sleeve Blouse",
-    description:
-      "A lightweight ruffle-sleeve blouse with a flattering fit. Perfect for a feminine touch to any outfit.",
+    description: "A lightweight ruffle-sleeve blouse with a flattering fit. Perfect for a feminine touch to any outfit.",
     price: 45,
     discountPrice: 40,
     countInStock: 20,
@@ -930,7 +957,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=36",
+        url: "https://images.pexels.com/photos/4050387/pexels-photo-4050387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "Ruffle-Sleeve Blouse",
       },
     ],
@@ -939,8 +966,7 @@ const products = [
   },
   {
     name: "Classic Button-Up Shirt",
-    description:
-      "A versatile button-up shirt that can be dressed up or down. Made from soft fabric with a tailored fit, it's perfect for both casual and formal occasions.",
+    description: "A versatile button-up shirt that can be dressed up or down. Made from soft fabric with a tailored fit, it's perfect for both casual and formal occasions.",
     price: 60,
     discountPrice: 55,
     countInStock: 25,
@@ -954,7 +980,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=37",
+        url: "https://lh6.googleusercontent.com/proxy/eFaGan8adHZWmxYoutKqTXhQ48BOmI43sZBVC2rjrqvSrhf52RmbyyVfmGCFi-0NvYKRAR_BoIJYYqjmOfR5K0ygq3a2SVgV12FWNqtQPnfoE2x_dwYiOr95h1A-IGzjZvD3-agDw7zY",
         altText: "Classic Button-Up Shirt",
       },
     ],
@@ -963,8 +989,7 @@ const products = [
   },
   {
     name: "V-Neck Wrap Top",
-    description:
-      "A chic v-neck wrap top with a tie waist. Its elegant style makes it perfect for both casual and semi-formal occasions.",
+    description: "A chic v-neck wrap top with a tie waist. Its elegant style makes it perfect for both casual and semi-formal occasions.",
     price: 50,
     discountPrice: 45,
     countInStock: 30,
@@ -978,13 +1003,14 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://picsum.photos/500/500?random=38",
+        url: "https://images.pexels.com/photos/5480699/pexels-photo-5480699.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=2342&w=1233",
         altText: "V-Neck Wrap Top",
       },
     ],
     rating: 4.7,
     numReviews: 22,
-  },
-];
+  }
+]
+
 
 module.exports = products;

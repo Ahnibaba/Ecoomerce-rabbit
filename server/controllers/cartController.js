@@ -168,6 +168,8 @@ const getUserCart = async (req, res) => {
             res.json(cart)
         } else {
             //res.status(404).json({ message: "Cart not found" })
+            console.log("cart not found");
+            
         }
     } catch (error) {
         console.log("Error in the getUserCart function", error)
