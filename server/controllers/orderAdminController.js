@@ -15,7 +15,10 @@ const getAllOrder = async (req, res) => {
 
 const updateOrderStatus = async (req, res) => {
   try{
-    const order = await Order.findById(req.params.id)
+    const order = await Order.findById(req.params.id).populate({
+      path: "user",
+      select: "name email"
+    })
     if(order) {
         order.status = req.body.status || order.status
         if(order.status === "Delivered") {
