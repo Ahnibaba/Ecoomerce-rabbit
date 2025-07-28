@@ -14,15 +14,18 @@ const productAdminRoutes = require("./routes/productAdminRoutes")
 const orderAdminRoutes = require("./routes/orderAdminRoutes")
 
 
+dotenv.config()
+
+
 const app = express()
 
 app.use(express.json())
 app.use(cors({
-    origin: ["https://ecoomerce-rabbit-t6ln.vercel.app", "http://localhost:5173"]
+    origin: ["https://ecoomerce-rabbit-t6ln.vercel.app", "http://localhost:5173", "http://localhost:5174"]
 }))
 
 
-dotenv.config()
+
 
 
 const PORT = process.env.PORT || 3000
