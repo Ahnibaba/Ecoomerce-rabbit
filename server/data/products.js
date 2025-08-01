@@ -980,7 +980,7 @@ const products = [
     gender: "Women",
     images: [
       {
-        url: "https://lh6.googleusercontent.com/proxy/eFaGan8adHZWmxYoutKqTXhQ48BOmI43sZBVC2rjrqvSrhf52RmbyyVfmGCFi-0NvYKRAR_BoIJYYqjmOfR5K0ygq3a2SVgV12FWNqtQPnfoE2x_dwYiOr95h1A-IGzjZvD3-agDw7zY",
+        url: "https://oldnavy.gap.com/webcontent/0055/931/998/cn55931998.jpg",
         altText: "Classic Button-Up Shirt",
       },
     ],
