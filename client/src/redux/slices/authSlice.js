@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, isAction } from "@reduxjs/toolkit"
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import axios from "axios"
 
 // Retrieve user info from localStorage if available
